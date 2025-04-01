@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         "ollama",  # for local LLM
-        "streamlit",  # for the UI
+        "streamlit==1.42.2",  # for the UI
         "openai",  # for OpenAI client
         "anthropic",  # for Anthropic client
         "together",  # for Together client
@@ -19,9 +19,12 @@ setup(
         "spacy",  # for PII extraction, worked on python 3.11 and not 3.13
         "rank_bm25",  # for smart retrieval
         "PyMuPDF",  # for PDF handling
+        "firecrawl-py",  # for scraping urls
+        "google-genai",  # for Gemini client
     ],
     extras_require={
         "mlx": ["mlx-lm"],
+        "csm-mlx": ["csm-mlx @ git+https://github.com/senstella/csm-mlx.git"],
     },
     author="Sabri, Avanika, and Dan",
     description="A package for running minion protocols with local and remote LLMs",
